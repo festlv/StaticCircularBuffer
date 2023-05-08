@@ -48,3 +48,22 @@ Adding next element- the oldest element is overwritten
 buf.size() == 3
 Buffer contents: 4, 3, 2,
 ```
+
+# Building/running tests
+
+```shell
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ ./StaticCircularBuffer
+Allocating static circular buffer for 3 elements
+buf.size() == 0
+Adding 3 elements
+buf.size() == 3
+buf.at(0) == 3
+Adding next element- the oldest element is overwritten
+buf.size() == 3
+Buffer contents: 4, 3, 2, 
+......
+OK (6 tests, 6 ran, 15 checks, 0 ignored, 0 filtered out, 1 ms)
+```
