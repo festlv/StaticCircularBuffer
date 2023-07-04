@@ -105,6 +105,7 @@ public:
     iterator begin() { return iterator(0, this); }
     iterator end() { return iterator(_size, this); }
 
+    void clear() { _last=0; _size=0; }
 private:
     mutable std::array<T, TElemCount> _buf;
     mutable size_t _last = 0;
